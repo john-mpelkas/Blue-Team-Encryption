@@ -29,7 +29,8 @@ Key Deliverables: <br/>
     •	Project Demo  <br/>
       o	Possibly a video that demonstrates a file that is encrypted with our algorithm being attempted to be broken by encryption crackers <br/>
     •	10-12-page written report that will explain and summarize results and findings <br/>
-Scope (Steps): <br/>
+
+<STRONG>Scope (Steps):</STRONG>
   1.	Understand the current encryption algorithms and how they work <br/>
     a.	These algorithms include but aren’t limited to: SHA-256, Blowfish, Two-Fish, AES, DES, RSA, and DSA <br/>
   2.	Research other publications within this field of study to understand how others are taking on a task like this <br/>
