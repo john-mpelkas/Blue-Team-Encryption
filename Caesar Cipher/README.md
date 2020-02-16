@@ -12,8 +12,8 @@ one. <p>
 `Uif eph kvnqt pwfs uif xbmm.`
 
 <h3>Diagram</h3>
-<STRONG>
- `                       |------------|
+`
+                        |------------|
                         |    Text    |
                         |------------|
                               |
@@ -27,4 +27,4 @@ one. <p>
                   |     Caesar Cipher    |
                   |         text         |
                   |----------------------|`
-</STRONG>
+`
