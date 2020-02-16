@@ -1,5 +1,5 @@
 <h1>Caesar Cipher</h1>
-  <p> Caesar cipher is one of the most well known an simple encryption techniques.
+  <p> Caesar cipher is one of the most well known and simple encryption techniques.
 The Caesar cipher is known as a substitution cipher, meaning, each letter in
 plan text is replaced by a fixed number of positions down the used alphabet. </p>
 <br/>
