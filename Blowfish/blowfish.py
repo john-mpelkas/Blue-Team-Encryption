@@ -272,7 +272,11 @@ s_boxes = [
             0xB74E6132, 0xCE77E25B, 0x578FDFE3, 0x3AC372E6
         ]
     ]
+# performs a function on 32-bit block of data - xl
 
+# xl is left half of the 64 bit bock
+
+# returns a 32 bit result
 
 def round_func(xl):
     a = (xl & 0xFF000000) >> 24
@@ -292,6 +296,12 @@ def round_func(xl):
 
 # direction is 0 (Encrypt) or 1 (Decrypt)
 
+# xl is the upper 32 bits, and xr is the lower 32 bits
+
+# encrypts a 8 byte block of data
+
+# direction tells it what direction to apply the cipher
+
 
 def cipher(xl, xr, direction):
     if direction == 0:
@@ -302,7 +312,7 @@ def cipher(xl, xr, direction):
         xr = xr ^ p_boxes[16]
         xl = xl ^ p_boxes[17]
     else:
-        for i in range(17,1,-1):
+        for i in range(17, 1, -1):
             xl = xl ^ p_boxes[i]
             xr = round_func(xl) ^ xr
         xl, xr = xr, xl
@@ -338,6 +348,13 @@ def initialize(key):
             s_boxes[i][j + 1] = right
 
 
+# ord() function returns an integer that represents the ascii value
+
+
+# 0 means encrypt
+
+# encrypts an 8 byte block of text, "data" is an 8 byte string
+
 def encrypt(data):
     if len(data) != 8:
         raise RuntimeError("Attempted to encrypt data of invalid block length: %s" % len(data))
@@ -349,6 +366,13 @@ def encrypt(data):
         chr((cl >> 24) & 0xFF), chr((cl >> 16) & 0xFF), chr((cl >> 8) & 0xFF), chr(cl & 0xFF), chr((cr >> 24) & 0xFF), chr((cr >> 16) & 0xFF), chr((cr >> 8) & 0xFF), chr(cr & 0xFF)
     ])
     return chars
+
+
+# type casts left and right to an int
+
+# 1 means decrypt
+
+# decrypts an 8 byte block of text, "data" is an 8 byte string
 
 
 def decrypt(data):
