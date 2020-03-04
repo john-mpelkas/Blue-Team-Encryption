@@ -350,6 +350,7 @@ def initialize(key):
 
 # ord() function returns an integer that represents the ascii value
 
+# data must be 8 bytes (64 bits)
 
 # 0 means encrypt
 
