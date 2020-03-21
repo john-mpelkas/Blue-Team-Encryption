@@ -5,10 +5,11 @@
 # t is temporary 256-byte vector
 
 
-# sets s equal to values 0 to 255
+
 import codecs
 
 
+# sets s equal to values 0 to 255 in a list
 def ksa(key):
     s = list(range(256))
     j = 0
