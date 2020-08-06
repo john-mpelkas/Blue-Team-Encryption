@@ -4,8 +4,6 @@
 # s is 256-bytes
 # t is temporary 256-byte vector
 
-
-
 import codecs
 
 

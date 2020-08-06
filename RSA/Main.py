@@ -1,12 +1,18 @@
-import rsa512
+import RsaAlgo
 import PrimeNumberGenerator
+import datetime
 
 # Generating new keys
 # Keys will be stored in;
 #   dkeybank.txt & ekeybank.txt
-rsa512.rsa(PrimeNumberGenerator.genKeys(512), PrimeNumberGenerator.genKeys(512))
 
-# Messages are generally numbers when using RSA encryption
+begin_time = datetime.datetime.now()
+RsaAlgo.rsa(PrimeNumberGenerator.genKeys(2048), PrimeNumberGenerator.genKeys(2048))
+
+
+print(datetime.datetime.now() - begin_time)
+
+# Going to encrypt some number
 msg = int(input("Enter a message(number): "))
 
 # Getting keys from ekeybank to encrypt file
